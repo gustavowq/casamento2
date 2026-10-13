@@ -1,0 +1,55 @@
+/* Paleta e tipografia — altere aqui e o site inteiro acompanha */
+:root{
+  /* papel */
+  --palette-gray:#DADEDF;
+  --palette-green-light:#C0CFB2;
+  --palette-green:#95A58D;
+  --palette-blue-light:#9BAED4;
+  --palette-blue:#5D7B9F;
+  --paper:#F4F6F3;
+  --paper-2:var(--palette-gray);
+  --ivory:#F9FAF7;
+  --envelope:var(--palette-gray);
+
+  /* tinta */
+  --ink:#28352B;
+  --ink-2:#2D392F;
+  --ink-3:#2E3A30;
+  --line:rgba(40,53,43,.18);
+  --line-2:rgba(40,53,43,.34);
+
+  /* identidade */
+  --sage:var(--palette-green);
+  --sage-deep:#3C5036;
+  --sage-soft:var(--palette-green-light);
+  --mist:var(--palette-blue-light);
+  --mist-deep:var(--palette-blue);
+  --wax:var(--palette-green);
+  --wax-light:var(--palette-green-light);
+  --wax-shadow:#697C61;
+  --gold:#B9A36A;            /* somente nas alianças */
+
+  /* seção escura */
+  --forest:var(--palette-green);
+  --forest-ink:var(--ink);
+
+  /* fontes */
+  --f-display:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --f-script:"Pinyon Script", "Snell Roundhand", cursive;
+  --f-text:"Cormorant Garamond", Garamond, "Times New Roman", serif;
+  --f-label:"Jost", "Futura", "Avenir Next", "Segoe UI", sans-serif;
+
+  /* movimento */
+  --ease:cubic-bezier(.65,.05,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+
+  /* espaçamento */
+  --gutter:clamp(20px,5vw,80px);
+  --section:clamp(110px,16vh,190px);
+
+  /* texturas geradas por JS (papel, borda artesanal, forro) */
+  --grain:none;
+  --deckle:none;
+  --deckle-wide:none;
+  --liner:none;
+}

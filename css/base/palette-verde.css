@@ -1,0 +1,78 @@
+/* Paleta da referencia: verde salvia pastel como superficie principal. */
+:root[data-palette="verde"]{
+  --paper:var(--palette-green);
+  --paper-2:var(--palette-green-light);
+  --sage:#2F3B2C;
+  --sage-deep:#2F3B2C;
+  --mist-deep:#2C3746;
+}
+
+/* Envelope e formularios claros, coordenados com o cinza da paleta. */
+[data-palette="verde"] .envelope,
+[data-palette="verde"] .card,
+[data-palette="verde"] .reply,
+[data-palette="verde"] .letter,
+[data-palette="verde"] .gifts,
+[data-palette="verde"] .faq,
+[data-palette="verde"] .day{
+  --paper:#F4F6F3;
+  --paper-2:var(--palette-gray);
+  --sage:#697C61;
+  --sage-deep:#3C5036;
+  color:var(--ink);
+}
+
+[data-palette="verde"] .opening::before{background:radial-gradient(110% 80% at 50% 45%,transparent 50%,rgba(76,94,68,.10) 100%)}
+[data-palette="verde"] .veil{background:#F4F6F3}
+[data-palette="verde"] .grain{opacity:.38}
+[data-palette="verde"] .nav{background:var(--palette-green);border-bottom-color:var(--line-2)}
+[data-palette="verde"] .arch,
+[data-palette="verde"] .ch-media,
+[data-palette="verde"] .g-media{background-color:var(--palette-green-light)}
+[data-palette="verde"] .arch-line{border-color:rgba(60,80,54,.4)}
+[data-palette="verde"] .story-year{-webkit-text-stroke-color:rgba(60,80,54,.4)}
+
+[data-palette="verde"] .day{
+  background:
+    radial-gradient(70% 50% at 85% 0%,rgba(155,174,212,.22),transparent 70%),
+    radial-gradient(60% 50% at 0% 100%,rgba(192,207,178,.32),transparent 70%),
+    linear-gradient(180deg,#F4F6F3,#DADEDF);
+}
+[data-palette="verde"] .day::before{mix-blend-mode:multiply;opacity:.3}
+[data-palette="verde"] .day .label,
+[data-palette="verde"] .v-note,
+[data-palette="verde"] .program-list i{color:var(--ink-2)}
+[data-palette="verde"] .day .title,
+[data-palette="verde"] .v-time,
+[data-palette="verde"] .program-title,
+[data-palette="verde"] .program-list time,
+[data-palette="verde"] .program-list b,
+[data-palette="verde"] .day .link--light{color:var(--ink)}
+[data-palette="verde"] .day .title em,
+[data-palette="verde"] .v-name{color:var(--sage-deep)}
+[data-palette="verde"] .venue-rule{background:linear-gradient(transparent,var(--line-2) 20%,var(--line-2) 80%,transparent)}
+[data-palette="verde"] .program-list li{border-bottom-color:var(--line)}
+[data-palette="verde"] .leader{background:repeating-linear-gradient(90deg,rgba(40,53,43,.4) 0 1px,transparent 1px 8px)}
+[data-palette="verde"] .g-tag{color:var(--ink-2)}
+
+/* Faixas claras alternam com o sálvia, mantendo a largura original do conteúdo. */
+[data-palette="verde"] .letter{
+  max-width:none;
+  padding-inline:max(var(--gutter),calc((100% - 900px) / 2 + var(--gutter)));
+  background:linear-gradient(180deg,#F9FAF7,#F4F6F3);
+  border-block:1px solid var(--line);
+}
+[data-palette="verde"] .gifts{
+  background:
+    radial-gradient(80% 45% at 100% 0%,rgba(155,174,212,.16),transparent 70%),
+    linear-gradient(180deg,#E8ECE9,var(--palette-gray));
+  border-block:1px solid var(--line);
+}
+[data-palette="verde"] .faq{
+  max-width:none;
+  padding-inline:max(var(--gutter),calc((100% - 1380px) / 2 + var(--gutter)));
+  background:
+    radial-gradient(75% 80% at 0% 100%,rgba(155,174,212,.14),transparent 70%),
+    linear-gradient(180deg,#F4F6F3,#EDF1F2);
+  border-block:1px solid var(--line);
+}

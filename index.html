@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR" class="is-locked" data-palette="verde">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emily &amp; Augusto</title>
+<meta name="description" content="Emily e Augusto vão se casar — sábado, 12 de junho de 2027, na Villa das Flores.">
+<meta name="theme-color" content="#95A58D">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ==========================================================
+     ABERTURA — envelope, selo e cartão
+     ========================================================== -->
+<div class="opening" id="opening">
+  <div class="op-corner op-corner--tl art" data-art="corner" data-src="assets/img/convite/buque-canto.webp" aria-hidden="true"></div>
+  <div class="op-corner op-corner--br art" data-art="corner" data-src="assets/img/convite/buque-canto.webp" aria-hidden="true"></div>
+
+  <section class="op-stage" aria-label="Convite">
+    <header class="op-head" id="opHead">
+      <p class="label">Convite de casamento</p>
+      <p class="op-names"><span>Emily</span> <em>&amp;</em> <span>Augusto</span></p>
+    </header>
+
+    <div class="env-wrap" id="envWrap" role="button" tabindex="0" aria-label="Abrir o convite" aria-disabled="true">
+      <div class="envelope" id="envelope">
+        <div class="env-back liner"></div>
+
+        <div class="pocket" id="pocket">
+          <article class="card" id="card" aria-label="Convite de Emily e Augusto para 12 de junho de 2027">
+            <div class="card-paper">
+              <span class="card-frame" aria-hidden="true"></span>
+              <div class="card-top art" data-art="garland" data-src="assets/img/convite/guirlanda.webp" aria-hidden="true"></div>
+              <div class="card-body">
+                <p class="c-lead">Juntamente com suas famílias</p>
+                <h2 class="c-names"><span>Emily</span><em>&amp;</em><span>Augusto</span></h2>
+                <p class="c-invite">têm a alegria de convidar você para a celebração do seu casamento</p>
+                <p class="c-date"><span>Sábado</span><b>12</b><span>Junho</span></p>
+                <p class="c-year">MMXXVII <i>·</i> às dezesseis horas</p>
+                <p class="c-place"><span>Villa das Flores</span><i>cerimônia e recepção no jardim</i></p>
+              </div>
+              <div class="card-bottom art" data-art="sprig" data-src="assets/img/convite/ramo.webp" aria-hidden="true"></div>
+              <p class="c-rsvp">Confirme até 12 · 04 · 2027</p>
+              <i class="card-sheen" aria-hidden="true"></i>
+            </div>
+          </article>
+        </div>
+
+        <div class="fp fp--l"><i></i></div>
+        <div class="fp fp--r"><i></i></div>
+        <div class="fp fp--b"><i></i></div>
+        <p class="env-to">Para você, com amor</p>
+
+        <div class="flap-shadow" id="flapShadow"><i></i></div>
+        <div class="flap" id="flap">
+          <div class="face face--out"></div>
+          <div class="face face--in"><div class="liner"></div></div>
+        </div>
+
+        <div class="env-sprig art" id="envSprig" data-art="sprig" data-src="assets/img/convite/ramo.webp" aria-hidden="true"></div>
+
+        <div class="seal" id="seal" aria-hidden="true">
+          <div class="seal-half seal-half--l" id="halfL"><div class="wax art" data-art="none" data-src="assets/img/convite/selo-EA.webp"><b>E<em>&amp;</em>A</b></div></div>
+          <div class="seal-half seal-half--r" id="halfR"><div class="wax art" data-art="none" data-src="assets/img/convite/selo-EA.webp"><b>E<em>&amp;</em>A</b></div></div>
+          <svg class="seal-crack" id="sealCrack" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <path class="seal-crack-depth" pathLength="100" d="M52 0 L50 13 L53 25 L48 39 L51 51 L47 65 L50 79 L48 91 L49 100"/>
+            <path class="seal-crack-light" pathLength="100" d="M52 0 L50 13 L53 25 L48 39 L51 51 L47 65 L50 79 L48 91 L49 100"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <p class="op-hint" id="opHint" aria-live="polite"><i></i><span>Preparando o convite</span><i></i></p>
+  </section>
+
+  <div class="card-layer" id="cardLayer"></div>
+
+  <div class="op-controls" id="opControls">
+    <button class="op-enter" id="opEnter" type="button"><span>Entrar</span><i class="op-progress"><b id="opProgress"></b></i></button>
+    <button class="op-again" id="opAgain" type="button">Ver novamente</button>
+  </div>
+</div>
+
+<div class="veil" id="veil" aria-hidden="true"></div>
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<!-- ==========================================================
+     SITE
+     ========================================================== -->
+<div class="site" id="site" inert>
+
+  <header class="nav" id="nav">
+    <a class="nav-mono" href="#inicio" aria-label="Início">E<em>&amp;</em>A</a>
+    <nav class="nav-links" aria-label="Seções">
+      <a href="#historia">História</a>
+      <a href="#dia">O dia</a>
+      <a href="#dress">Dress code</a>
+      <a href="#presentes">Presentes</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="nav-cta" href="#rsvp">Confirmar presença</a>
+    <button class="nav-menu" id="navMenu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <div class="menu" id="menu">
+    <nav class="menu-links" aria-label="Menu">
+      <a href="#historia">Nossa história</a>
+      <a href="#dia">O grande dia</a>
+      <a href="#dress">Dress code</a>
+      <a href="#presentes">Presentes</a>
+      <a href="#rsvp">Confirmar presença</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <button class="link" type="button" data-back>Rever o convite</button>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <p class="label hero-kicker" data-hero><span class="rule"></span>Nós vamos nos casar</p>
+        <h1 class="hero-names" aria-label="Emily e Augusto">
+          <span class="ln"><span>Emily</span></span>
+          <span class="ln hero-amp"><span>&amp;</span></span>
+          <span class="ln hero-second"><span>Augusto</span></span>
+        </h1>
+        <p class="hero-date" data-hero>Sábado, 12 de junho de 2027<span class="dot">·</span>Villa das Flores</p>
+        <div class="countdown" data-hero role="timer" aria-label="Tempo até o casamento">
+          <div><b data-cd="0">000</b><span>dias</span></div>
+          <div><b data-cd="1">00</b><span>horas</span></div>
+          <div><b data-cd="2">00</b><span>minutos</span></div>
+          <div><b data-cd="3">00</b><span>segundos</span></div>
+        </div>
+        <div class="hero-actions" data-hero>
+          <a class="btn btn--ink" href="#rsvp">Confirmar presença</a>
+          <a class="link" href="#presentes">Lista de presentes</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <span class="arch-line" aria-hidden="true"></span>
+        <div class="arch art" data-art="arch" data-seed="7" data-src="assets/img/site/casal.webp" role="img" aria-label="Emily e Augusto"></div>
+        <figcaption class="hero-vert" aria-hidden="true">Villa das Flores · MMXXVII</figcaption>
+      </figure>
+      <a class="scroll-hint" href="#carta"><span>Role</span><i></i></a>
+    </section>
+
+    <!-- CARTA -->
+    <section class="letter" id="carta">
+      <div class="ornament art" data-art="ornament" aria-hidden="true"></div>
+      <p class="letter-text" data-reveal>Entre lírios e oliveiras, vamos dizer <em>sim</em>. Nada faria mais sentido do que ter você por perto quando isso acontecer.</p>
+      <p class="letter-sign" data-reveal>Emily &amp; Augusto</p>
+    </section>
+
+    <!-- NOSSA HISTÓRIA -->
+    <section class="story" id="historia">
+      <div class="story-aside">
+        <div class="story-sticky">
+          <p class="label">Nossa história</p>
+          <h2 class="title"><span class="ln"><span>Como tudo</span></span><span class="ln"><span><em>começou</em></span></span></h2>
+          <div class="story-year" aria-hidden="true"><span id="storyYear">2019</span></div>
+          <p class="story-count label" aria-hidden="true"><span id="storyIdx">I</span> de IV</p>
+        </div>
+      </div>
+      <div class="story-list">
+        <article class="chapter" data-year="2019" data-idx="I">
+          <div class="ch-media art" data-art="arch" data-seed="1" data-src="assets/img/site/historia-1.webp" role="img" aria-label="Emily e Augusto em 2019"></div>
+          <div class="ch-text">
+            <p class="label">Capítulo I · 2019</p>
+            <h3>Uma pergunta numa livraria</h3>
+            <p>Ela procurava um livro de poesia; ele fingiu saber onde ficava. O café depois durou a tarde inteira, e nenhum dos dois quis ir embora.</p>
+          </div>
+        </article>
+        <article class="chapter" data-year="2021" data-idx="II">
+          <div class="ch-media art" data-art="arch" data-seed="2" data-src="assets/img/site/historia-2.webp" role="img" aria-label="A primeira viagem, em 2021"></div>
+          <div class="ch-text">
+            <p class="label">Capítulo II · 2021</p>
+            <h3>Três dias de chuva na serra</h3>
+            <p>Um chalé, um quebra-cabeça de mil peças e a descoberta de que qualquer lugar fica bonito quando é a dois.</p>
+          </div>
+        </article>
+        <article class="chapter" data-year="2024" data-idx="III">
+          <div class="ch-media art" data-art="arch" data-seed="3" data-src="assets/img/site/historia-3.webp" role="img" aria-label="O pedido, em 2024"></div>
+          <div class="ch-text">
+            <p class="label">Capítulo III · 2024</p>
+            <h3>Um jardim de lírios</h3>
+            <p>Ao pôr do sol, entre lírios brancos, Augusto se ajoelhou. Emily disse sim antes mesmo de ele terminar a pergunta.</p>
+          </div>
+        </article>
+        <article class="chapter" data-year="2027" data-idx="IV">
+          <div class="ch-media art" data-art="arch" data-seed="4" data-src="assets/img/site/historia-4.webp" role="img" aria-label="2027"></div>
+          <div class="ch-text">
+            <p class="label">Capítulo IV · 2027</p>
+            <h3>O próximo capítulo</h3>
+            <p>Agora queremos você por perto para escrever a página mais bonita desta história. Guardamos um lugar especial para você.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- O GRANDE DIA -->
+    <section class="day" id="dia">
+      <header class="sec-head sec-head--center">
+        <p class="label">O grande dia</p>
+        <h2 class="title"><span class="ln"><span>Sábado,</span></span><span class="ln"><span><em>doze de junho</em></span></span></h2>
+      </header>
+
+      <div class="venues">
+        <article class="venue" data-reveal>
+          <p class="label">Cerimônia</p>
+          <p class="v-time">16<sup>h</sup></p>
+          <h3 class="v-name">Jardim das Oliveiras</h3>
+          <address>Villa das Flores<br>Estrada das Flores, 1200</address>
+          <p class="v-note">Chegue a partir das 15h30. A cerimônia acontece ao ar livre, sobre o gramado, e começa pontualmente.</p>
+          <p class="v-links"><a class="link link--light" data-maps href="#" target="_blank" rel="noopener">Como chegar</a><a class="link link--light" data-calendar href="#" target="_blank" rel="noopener">Salvar na agenda</a></p>
+        </article>
+        <span class="venue-rule" aria-hidden="true"></span>
+        <article class="venue" data-reveal>
+          <p class="label">Recepção</p>
+          <p class="v-time">18<sup>h</sup></p>
+          <h3 class="v-name">Estufa de Vidro</h3>
+          <address>No mesmo endereço,<br>ao lado do jardim</address>
+          <p class="v-note">Jantar, pista de dança e uma mesa de doces que vale a viagem. Estacionamento com manobrista no local.</p>
+          <p class="v-links"><a class="link link--light" data-maps href="#" target="_blank" rel="noopener">Como chegar</a><a class="link link--light" data-calendar href="#" target="_blank" rel="noopener">Salvar na agenda</a></p>
+        </article>
+      </div>
+
+      <div class="program">
+        <h3 class="program-title" data-reveal>Programação</h3>
+        <ol class="program-list">
+          <li><time>15h30</time><span class="leader" aria-hidden="true"></span><div><b>Boas-vindas</b><i>Limonada de lavanda e música ao vivo sob as oliveiras</i></div></li>
+          <li><time>16h00</time><span class="leader" aria-hidden="true"></span><div><b>Cerimônia</b><i>Os votos, o sim e algumas lágrimas de alegria</i></div></li>
+          <li><time>17h00</time><span class="leader" aria-hidden="true"></span><div><b>Coquetel ao pôr do sol</b><i>Fotos no jardim, drinks autorais e petiscos da estação</i></div></li>
+          <li><time>19h00</time><span class="leader" aria-hidden="true"></span><div><b>Jantar</b><i>Menu de três tempos servido na Estufa de Vidro</i></div></li>
+          <li><time>21h00</time><span class="leader" aria-hidden="true"></span><div><b>Festa</b><i>A pista abre com a nossa primeira dança</i></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- DRESS CODE -->
+    <section class="dress" id="dress">
+      <div class="dress-text">
+        <p class="label">Dress code</p>
+        <h2 class="title"><span class="ln"><span>Esporte</span></span><span class="ln"><span><em>fino</em></span></span></h2>
+        <p class="dress-sub" data-reveal>no jardim, ao entardecer</p>
+        <p class="body" data-reveal>Queremos todos elegantes e confortáveis: a cerimônia é sobre o gramado e a festa vai longe. Tons suaves conversam com o cenário.</p>
+
+        <div class="tabs" role="tablist" aria-label="Sugestões de traje" data-reveal>
+          <button class="tab" id="tabElas" role="tab" type="button" aria-selected="true" aria-controls="tipsElas">Para elas</button>
+          <button class="tab" id="tabEles" role="tab" type="button" aria-selected="false" aria-controls="tipsEles" tabindex="-1">Para eles</button>
+          <i class="tabs-ink" aria-hidden="true"></i>
+        </div>
+        <dl class="tips" id="tipsElas" role="tabpanel" aria-labelledby="tabElas">
+          <div><dt>Vestidos</dt><dd>Midi ou longos, em tecidos fluidos como seda, crepe ou linho.</dd></div>
+          <div><dt>Sapatos</dt><dd>Salto bloco, anabela ou sandálias baixas. O gramado agradece.</dd></div>
+          <div><dt>À noite</dt><dd>Um xale ou um blazer leve para quando o sol se puser.</dd></div>
+        </dl>
+        <dl class="tips" id="tipsEles" role="tabpanel" aria-labelledby="tabEles" hidden>
+          <div><dt>Terno</dt><dd>Em tons claros, areia ou azul. A gravata é opcional.</dd></div>
+          <div><dt>Sapatos</dt><dd>Couro ou camurça, com sola confortável para a pista.</dd></div>
+          <div><dt>Detalhes</dt><dd>Um lenço de bolso em sálvia ou azul suave fica perfeito nas fotos.</dd></div>
+        </dl>
+        <p class="avoid" data-reveal><span class="label">Evitar</span>branco e off-white<i>·</i>salto fino<i>·</i>preto total</p>
+      </div>
+
+      <div class="dress-palette">
+        <div class="swatches" id="swatches">
+          <button class="swatch" type="button" style="--c:#DADEDF" data-name="Cinza suave" data-note="Um neutro delicado para ternos e tecidos de textura leve."><i></i><span>Cinza</span></button>
+          <button class="swatch" type="button" style="--c:#C0CFB2" data-name="Verde claro" data-note="Suave e natural, combina com tecidos fluidos e acessórios delicados."><i></i><span>Verde claro</span></button>
+          <button class="swatch" type="button" style="--c:#95A58D" data-name="Verde sálvia" data-note="A cor principal da nossa paleta, elegante em linho, seda e detalhes do traje."><i></i><span>Sálvia</span></button>
+          <button class="swatch" type="button" style="--c:#9BAED4" data-name="Azul suave" data-note="Delicado em vestidos fluidos e em pequenos detalhes."><i></i><span>Azul suave</span></button>
+          <button class="swatch" type="button" style="--c:#5D7B9F" data-name="Azul ardósia" data-note="Um azul sóbrio para ternos, gravatas e acessórios."><i></i><span>Ardósia</span></button>
+        </div>
+        <p class="swatch-caption" id="swatchCaption" aria-live="polite"><span class="label">Paleta sugerida</span><em>Toque em um tecido para ver a sugestão</em></p>
+        <p class="weather" data-reveal><span class="label">Clima</span>Junho na serra: dias amenos e noites frescas, perto de 10 °C. Vale levar um agasalho elegante.</p>
+      </div>
+    </section>
+
+    <!-- PRESENTES -->
+    <section class="gifts" id="presentes">
+      <header class="gifts-head">
+        <div>
+          <p class="label">Lista de presentes</p>
+          <h2 class="title"><span class="ln"><span>Com</span></span><span class="ln"><span><em>carinho</em></span></span></h2>
+        </div>
+        <div class="gifts-intro">
+          <p class="body" data-reveal>Sua presença é o presente mais bonito. Se quiser nos mimar, escolha abaixo o que vai levar: assim nada se repete e tudo chega com a sua cara.</p>
+          <p class="pix" data-reveal><span class="label">PIX</span><span class="pix-key" id="pixKey"></span><button class="link" type="button" data-copy>Copiar chave</button></p>
+        </div>
+      </header>
+
+      <div class="gift-filters" id="giftFilters" role="group" aria-label="Filtrar presentes">
+        <button type="button" data-f="all" aria-pressed="true">Todos<sup></sup></button>
+        <button type="button" data-f="casa" aria-pressed="false">Casa<sup></sup></button>
+        <button type="button" data-f="lua" aria-pressed="false">Lua de mel<sup></sup></button>
+        <button type="button" data-f="exp" aria-pressed="false">Experiências<sup></sup></button>
+      </div>
+
+      <div class="gift-grid" id="giftGrid"></div>
+
+      <div class="my-gift" id="myGift" hidden>
+        <span class="my-gift-seal" aria-hidden="true">E&amp;A</span>
+        <p><span class="label">Seu presente</span><span id="myGiftText"></span></p>
+        <button class="link link--light" type="button" id="myGiftUndo">Desfazer</button>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp" id="rsvp">
+      <div class="rsvp-wash art" data-art="wash" data-seed="9" aria-hidden="true"></div>
+      <div class="reply" id="reply">
+        <div class="reply-in">
+          <form class="reply-face reply-front" id="replyForm" novalidate>
+            <p class="label">Cartão-resposta</p>
+            <h2 class="reply-title">Você <em>vem?</em></h2>
+            <p class="reply-dead">Por gentileza, responda até 12 de abril de 2027<span id="rsvpDays"></span></p>
+
+            <div class="field"><input id="rName" name="name" placeholder=" " autocomplete="name"><label for="rName">Nome completo</label></div>
+            <div class="field"><input id="rContact" name="contact" placeholder=" " autocomplete="email"><label for="rContact">E-mail ou WhatsApp</label></div>
+
+            <fieldset class="choice">
+              <legend class="sr-only">Presença</legend>
+              <label class="choice-opt"><input type="radio" name="going" value="sim" checked><span>Aceita com alegria</span></label>
+              <label class="choice-opt"><input type="radio" name="going" value="nao"><span>Declina com pesar</span></label>
+            </fieldset>
+
+            <div class="more"><div class="more-in">
+              <div class="row">
+                <span class="label">Acompanhantes</span>
+                <div class="stepper" id="rStep"><button type="button" data-step="-1" aria-label="Menos um acompanhante">−</button><output id="rGuests" aria-live="polite">0</output><button type="button" data-step="1" aria-label="Mais um acompanhante">+</button></div>
+              </div>
+              <div class="row row--col">
+                <span class="label">Restrições alimentares</span>
+                <div class="checks">
+                  <label><input type="checkbox" value="vegetariano"><span>Vegetariano</span></label>
+                  <label><input type="checkbox" value="vegano"><span>Vegano</span></label>
+                  <label><input type="checkbox" value="sem glúten"><span>Sem glúten</span></label>
+                  <label><input type="checkbox" value="sem lactose"><span>Sem lactose</span></label>
+                </div>
+              </div>
+              <div class="field"><input id="rSong" name="song" placeholder=" "><label for="rSong">Uma música que não pode faltar</label></div>
+            </div></div>
+
+            <div class="field"><textarea id="rMsg" name="msg" rows="2" placeholder=" "></textarea><label for="rMsg">Um recado para os noivos</label></div>
+            <p class="err" id="rErr" role="alert"></p>
+            <button class="btn btn--ink btn--wide" type="submit">Enviar resposta</button>
+          </form>
+
+          <div class="reply-face reply-back" aria-live="polite">
+            <div class="seal-mini" aria-hidden="true"><span class="wax"><b>E<em>&amp;</em>A</b></span></div>
+            <p class="label">Resposta recebida</p>
+            <h3 id="rbTitle">Obrigado</h3>
+            <p id="rbText"></p>
+            <button class="link" type="button" id="rEdit">Editar resposta</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DÚVIDAS -->
+    <section class="faq" id="duvidas">
+      <div class="faq-aside">
+        <p class="label">Dúvidas</p>
+        <h2 class="title"><span class="ln"><span>Perguntas</span></span><span class="ln"><span><em>frequentes</em></span></span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" data-reveal><button class="faq-q" type="button" aria-expanded="false">Posso levar acompanhante?<i aria-hidden="true"></i></button><div class="faq-a"><div><p>Os convites são nominais. Indique no cartão-resposta quantas pessoas vêm com você; em caso de dúvida, fale com a gente.</p></div></div></div>
+        <div class="faq-item" data-reveal><button class="faq-q" type="button" aria-expanded="false">Crianças são bem-vindas?<i aria-hidden="true"></i></button><div class="faq-a"><div><p>Claro. Teremos um espaço com monitoras durante a recepção, das 18h às 23h.</p></div></div></div>
+        <div class="faq-item" data-reveal><button class="faq-q" type="button" aria-expanded="false">Como chegar e onde estacionar?<i aria-hidden="true"></i></button><div class="faq-a"><div><p>A Villa das Flores tem estacionamento gratuito com manobrista. Haverá também um transfer saindo do centro às 15h, com volta a partir das 23h.</p></div></div></div>
+        <div class="faq-item" data-reveal><button class="faq-q" type="button" aria-expanded="false">Onde me hospedar?<i aria-hidden="true"></i></button><div class="faq-a"><div><p>Reservamos tarifas especiais em duas pousadas a cinco minutos do local. Use o código EMILYEAUGUSTO ao reservar.</p></div></div></div>
+        <div class="faq-item" data-reveal><button class="faq-q" type="button" aria-expanded="false">E se chover?<i aria-hidden="true"></i></button><div class="faq-a"><div><p>A cerimônia é no jardim, mas a Estufa de Vidro está preparada para receber todos caso o céu não colabore.</p></div></div></div>
+        <div class="faq-item" data-reveal><button class="faq-q" type="button" aria-expanded="false">Até quando posso confirmar?<i aria-hidden="true"></i></button><div class="faq-a"><div><p>Até 12 de abril de 2027, pelo cartão-resposta acima.</p></div></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-art art" data-art="ornament" aria-hidden="true"></div>
+    <p class="footer-script">Até lá</p>
+    <p class="footer-date">12 <i>·</i> 06 <i>·</i> 2027</p>
+    <p class="label">Villa das Flores</p>
+    <p class="footer-tag">#EmilyEAugusto2027</p>
+    <button class="link" type="button" data-back>Rever o convite</button>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<!-- Gaveta: reservar presente -->
+<dialog class="drawer" id="drawer" aria-labelledby="dwTitle">
+  <form class="drawer-in" id="drawerForm" novalidate>
+    <header class="drawer-head">
+      <p class="label">Reservar presente</p>
+      <h3 id="dwTitle">Presente</h3>
+      <p class="drawer-price" id="dwPrice"></p>
+      <button class="drawer-close" type="button" data-close aria-label="Fechar"></button>
+    </header>
+    <div class="drawer-body">
+      <div class="row" id="dwQtyRow">
+        <span class="label">Cotas</span>
+        <div class="stepper" id="dwStep"><button type="button" data-step="-1" aria-label="Menos uma cota">−</button><output id="dwQty">1</output><button type="button" data-step="1" aria-label="Mais uma cota">+</button></div>
+        <span class="drawer-total" id="dwTotal"></span>
+      </div>
+      <fieldset class="choice choice--cards">
+        <legend class="label">Como prefere presentear</legend>
+        <label class="choice-opt"><input type="radio" name="mode" value="dia" checked><span>Levo no dia<small>Entrego pessoalmente na festa</small></span></label>
+        <label class="choice-opt"><input type="radio" name="mode" value="pix"><span>Via PIX<small>Transferência com recado</small></span></label>
+      </fieldset>
+      <p class="drawer-pix" id="dwPix" hidden><span class="label">Chave PIX</span><span class="pix-key"></span><button class="link" type="button" data-copy>Copiar</button></p>
+      <div class="field"><input id="dwName" placeholder=" " autocomplete="name"><label for="dwName">Seu nome</label></div>
+      <div class="field"><textarea id="dwMsg" rows="3" placeholder=" "></textarea><label for="dwMsg">Recado para os noivos (opcional)</label></div>
+      <p class="drawer-note" id="dwNote" hidden>Isso substitui o presente que você tinha reservado.</p>
+      <p class="err" id="dwErr" role="alert"></p>
+    </div>
+    <footer class="drawer-foot">
+      <button class="link" type="button" data-close>Cancelar</button>
+      <button class="btn btn--ink" type="submit">Reservar</button>
+    </footer>
+  </form>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

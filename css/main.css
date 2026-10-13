@@ -1,0 +1,27 @@
+/* Ordem importa: base → componentes → abertura → site */
+@import url("base/tokens.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+
+@import url("components/buttons.css");
+@import url("components/forms.css");
+@import url("components/art.css");
+@import url("components/drawer.css");
+
+@import url("invite/opening.css");
+@import url("invite/envelope.css");
+@import url("invite/card.css");
+
+@import url("site/nav.css");
+@import url("site/hero.css");
+@import url("site/letter.css");
+@import url("site/story.css");
+@import url("site/day.css");
+@import url("site/dress.css");
+@import url("site/gifts.css");
+@import url("site/rsvp.css");
+@import url("site/faq.css");
+@import url("site/footer.css");
+
+/* Paleta alternativa: ativa com <html data-palette="verde"> */
+@import url("base/palette-verde.css");

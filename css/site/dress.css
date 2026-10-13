@@ -1,0 +1,44 @@
+.dress{
+  max-width:1380px;margin:0 auto;padding:var(--section) var(--gutter);
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(56px,8vw,150px);align-items:center;
+}
+.dress-sub{margin:.5em 0 1.2em;font-style:italic;font-size:clamp(23px,.8vw + 18px,28px);color:var(--sage-deep)}
+.tabs{position:relative;display:inline-flex;gap:38px;margin:42px 0 4px;border-bottom:1px solid var(--line)}
+.tab{padding:0 0 15px;border:0;background:none;cursor:pointer;font-family:var(--f-label);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);transition:color .5s}
+.tab[aria-selected="true"]{color:var(--ink)}
+.tabs-ink{position:absolute;left:0;bottom:-1px;height:1px;width:var(--w,80px);background:var(--ink);transform:translateX(var(--x,0));transition:transform .8s var(--ease),width .8s var(--ease)}
+.tips{margin:0}
+.tips > div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.tips dt{padding-top:.5em;font-family:var(--f-label);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink)}
+.tips dd{margin:0;color:var(--ink-2)}
+.avoid{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 0;margin:30px 0 0;font-style:italic;color:var(--ink-2)}
+.avoid .label{margin-right:20px;font-style:normal}
+.avoid i{font-style:normal;color:var(--sage);margin:0 .7em}
+.dress-palette{display:flex;flex-direction:column;align-items:center;text-align:center}
+.swatches{display:flex;justify-content:center;padding:36px 20px 8px}
+.swatch{
+  --s:clamp(78px,8.4vw,128px);position:relative;width:var(--s);height:var(--s);margin:0 calc(var(--s) * -.11);
+  padding:0;border:0;border-radius:50%;background:none;cursor:pointer;
+  transition:transform .9s var(--ease-out);
+}
+.swatch i{
+  position:absolute;inset:0;border-radius:50%;
+  background:
+    radial-gradient(circle at 30% 26%,rgba(255,255,255,.4),transparent 46%),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.09) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,transparent 1px 3px),
+    var(--c);
+  box-shadow:0 22px 34px -20px rgba(40,40,28,.5),inset 0 0 0 1px rgba(0,0,0,.04);
+  transition:outline-offset .6s var(--ease-out);outline:1px solid transparent;outline-offset:2px;
+}
+.swatch span{position:absolute;left:50%;top:calc(100% + 18px);translate:-50% 0;white-space:nowrap;font-family:var(--f-label);font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-2);opacity:0;transition:opacity .5s}
+.swatch:hover,.swatch.is-active{transform:translateY(-14px);z-index:2}
+.swatch.is-entering{transition:none}
+.swatch:hover span,.swatch.is-active span{opacity:1}
+.swatch.is-active i{outline-color:var(--ink);outline-offset:6px}
+.swatch-caption{display:flex;flex-direction:column;gap:10px;min-height:5.4em;margin:62px 0 0;max-width:24em}
+.swatch-caption em{font-size:22px;line-height:1.4;color:var(--ink-2)}
+.weather{margin:34px 0 0;padding-top:26px;max-width:28em;border-top:1px solid var(--line);font-size:19px;color:var(--ink-2)}
+.weather .label{display:block;margin-bottom:8px}
+@media (max-width:900px){.dress{grid-template-columns:1fr}.tips > div{grid-template-columns:100px minmax(0,1fr)}}
+@media (max-width:420px){.swatch{--s:64px}}

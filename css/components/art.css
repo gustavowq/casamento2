@@ -1,0 +1,18 @@
+/* ilustrações: imagem real (se existir) ou desenho a traço feito em canvas */
+.art{background-repeat:no-repeat;background-position:center;background-size:cover}
+
+/* selo de cera em CSS (some quando a imagem do selo existe) */
+.wax{
+  position:absolute;inset:0;display:grid;place-items:center;
+  border-radius:49% 51% 48% 52% / 51% 48% 52% 49%;
+  background:
+    radial-gradient(circle at 33% 27%,rgba(255,255,255,.22),transparent 24%),
+    radial-gradient(circle at 50% 50%,var(--wax-light) 0,var(--wax) 44% 64%,var(--wax-shadow) 100%);
+  box-shadow:inset -.12em -.16em .3em rgba(0,0,0,.38),inset .06em .08em .12em rgba(255,255,255,.08);
+}
+.wax::before{content:"";position:absolute;inset:15%;border-radius:50%;box-shadow:inset 0 .04em .07em rgba(0,0,0,.5),0 .03em 0 rgba(255,255,255,.12)}
+.wax b{position:relative;font-family:var(--f-script);font-weight:400;font-size:1em;line-height:1;color:var(--sage-deep);padding-top:.08em;
+  text-shadow:0 -.03em 0 rgba(0,0,0,.5),0 .03em 0 rgba(255,255,255,.17)}
+.wax b em{font-family:var(--f-display);font-style:italic;font-size:.55em;margin:0 .04em}
+.wax.has-img{background-color:transparent;background-size:contain!important;box-shadow:none;border-radius:0}
+.wax.has-img::before,.wax.has-img b{display:none}
